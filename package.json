@@ -9,6 +9,10 @@
     "webpack:watch": "webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scil/replace-chunks-name-webpack-plugin.git"
+  },
   "types": "./dist/index.d.ts",
   "keywords": [
     "webpack",
