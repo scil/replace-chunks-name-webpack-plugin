@@ -1,9 +1,11 @@
 perform replacing on webpack chunks filenames, useful to shorten filename when dev.
 
+support webpack v5
 
 
 # 安装
 ````
+pnpm add replace-chunks-name-webpack-plugin -D
 yarn add replace-chunks-name-webpack-plugin -D
 npm install replace-chunks-name-webpack-plugin -D
 ````
@@ -17,12 +19,10 @@ npm install replace-chunks-name-webpack-plugin -D
             {
               pattern: 'vendors-node_modules',
               replacement: '[m',
-              target: 'id',
             },
             {
               pattern: /node_modules([-_])/g,
               replacement: '[m-$1',
-              target: 'id',
             },
           ]
         }
@@ -35,5 +35,6 @@ output
 `chunk-[m_tinymce_tinymce-vue_lib_es2015_main_ts_index_js-[m-_tinymce_ico-0fac6b.js`
 
 # credit 
--  [chunk-name-shortener/lib/WebpackPluginChunkNameShortener.js](https://github.com/gourmetjs/gourmet-ssr/blob/master/builder/chunk-name-shortener/lib/WebpackPluginChunkNameShortener.js)
--  [html-replace-webpack-plugin](https://github.com/iminif/html-replace-webpack-plugin/blob/master/index.js)
+- [webpack-replace-chunks-name-plugin](https://www.npmjs.com/package/webpack-replace-chunks-name-plugin)   use api `compilation.hooks.shouldGenerateChunkAssets` which not support renaming with webpack v5. But its code is my base.
+- [html-replace-webpack-plugin](https://github.com/iminif/html-replace-webpack-plugin/blob/master/index.js)
+- [chunk-name-shortener/lib/WebpackPluginChunkNameShortener.js](https://github.com/gourmetjs/gourmet-ssr/blob/master/builder/chunk-name-shortener/lib/WebpackPluginChunkNameShortener.js) use api `compilation.hooks.afterHash` which not support renaming with webpack v5

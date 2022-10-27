@@ -6,7 +6,7 @@ const isProdMode = process.env.NODE_ENV === 'production';
 module.exports = {
     devtool: 'source-map',
     mode: isProdMode ? 'production' : 'development',
-    entry: path.resolve('src/webpack-replace-chunks-name-plugin.ts'),
+    entry: path.resolve('src/replace-chunks-name-webpack-plugin.ts'),
     output: {
         path: path.resolve('dist'),
         filename: 'index.js',
