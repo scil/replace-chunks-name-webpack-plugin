@@ -22,18 +22,19 @@ class WebpackReplaceChunksNamePlugin {
 
     apply(compiler) {
         compiler.hooks.compilation.tap('replaceChunksName', (compilation) => {
-            compilation.hooks.afterOptimizeChunks.tap(
+            compilation.hooks.afterHash.tap(
                 'replaceChunksName',
                 () => {
                     if (this.enable) {
                         // console.log('try to replace chunk file name');
                         compilation.chunks.forEach((item) => {
-                            // console.log(item.id,item.name);
+                             // console.log(item.id,item.name);
 
-if(item.name || item.id)
-                            this.replaceConfig.forEach(({pattern,replacement} )=> {
-                                item.name = (item.name || item.id ).replace(pattern,replacement)
-                            })
+                            if(item.name || item.id)
+                                this.replaceConfig.forEach(({pattern,replacement} )=> {
+                                    item.name = (item.name || item.id ).replace(pattern,replacement)
+                                })
+
                         });
                     }
                 },

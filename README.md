@@ -1,8 +1,6 @@
 perform replacing on webpack chunks filenames, useful to shorten filename when dev.
 
-support webpack v5
-
-origin: [webpack-replace-chunks-name-plugin](https://www.npmjs.com/package/webpack-replace-chunks-name-plugin) which only replace the whole filename, not part. And it use api `compilation.hooks.shouldGenerateChunkAssets` which not support renaming with webpack v5.  
+origin: [webpack-replace-chunks-name-plugin](https://www.npmjs.com/package/webpack-replace-chunks-name-plugin) which only replace the whole filename, not part. And it use api `compilation.hooks.shouldGenerateChunkAssets`. 
 
 # 安装
 ````
@@ -37,4 +35,4 @@ output
 
 # credit 
 - [html-replace-webpack-plugin](https://github.com/iminif/html-replace-webpack-plugin/blob/master/index.js)
-[chunk-name-shortener/lib/WebpackPluginChunkNameShortener.js](https://github.com/gourmetjs/gourmet-ssr/blob/master/builder/chunk-name-shortener/lib/WebpackPluginChunkNameShortener.js) use api `compilation.hooks.afterHash` which not support renaming with webpack v5
+[chunk-name-shortener/lib/WebpackPluginChunkNameShortener.js](https://github.com/gourmetjs/gourmet-ssr/blob/master/builder/chunk-name-shortener/lib/WebpackPluginChunkNameShortener.js) use api `compilation.hooks.afterHash`  which is used by this plugin.
