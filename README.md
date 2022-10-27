@@ -2,6 +2,7 @@ perform replacing on webpack chunks filenames, useful to shorten filename when d
 
 support webpack v5
 
+origin: [webpack-replace-chunks-name-plugin](https://www.npmjs.com/package/webpack-replace-chunks-name-plugin) which only replace the whole filename, not part. And it use api `compilation.hooks.shouldGenerateChunkAssets` which not support renaming with webpack v5.  
 
 # 安装
 ````
@@ -35,6 +36,5 @@ output
 `chunk-[m_tinymce_tinymce-vue_lib_es2015_main_ts_index_js-[m-_tinymce_ico-0fac6b.js`
 
 # credit 
-- [webpack-replace-chunks-name-plugin](https://www.npmjs.com/package/webpack-replace-chunks-name-plugin)   use api `compilation.hooks.shouldGenerateChunkAssets` which not support renaming with webpack v5. But its code is my base.
 - [html-replace-webpack-plugin](https://github.com/iminif/html-replace-webpack-plugin/blob/master/index.js)
-- [chunk-name-shortener/lib/WebpackPluginChunkNameShortener.js](https://github.com/gourmetjs/gourmet-ssr/blob/master/builder/chunk-name-shortener/lib/WebpackPluginChunkNameShortener.js) use api `compilation.hooks.afterHash` which not support renaming with webpack v5
+[chunk-name-shortener/lib/WebpackPluginChunkNameShortener.js](https://github.com/gourmetjs/gourmet-ssr/blob/master/builder/chunk-name-shortener/lib/WebpackPluginChunkNameShortener.js) use api `compilation.hooks.afterHash` which not support renaming with webpack v5
