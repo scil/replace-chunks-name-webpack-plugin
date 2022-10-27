@@ -4,9 +4,9 @@ origin: [webpack-replace-chunks-name-plugin](https://www.npmjs.com/package/webpa
 
 # 安装
 ````
-pnpm add replace-chunks-name-webpack-plugin -D
-yarn add replace-chunks-name-webpack-plugin -D
-npm install replace-chunks-name-webpack-plugin -D
+pnpm add @scil/replace-chunks-name-webpack-plugin -D
+yarn add @scil/replace-chunks-name-webpack-plugin -D
+npm install @scil/replace-chunks-name-webpack-plugin -D
 ````
 
 # options

@@ -1,6 +1,6 @@
 {
   "name": "@scil/replace-chunks-name-webpack-plugin",
-  "version": "2.0.1",
+  "version": "3.0.1",
   "description": "perform str replacing on webpack chunks file name, useful to shorten filename ",
   "main": "./dist/index.js",
   "scripts": {
