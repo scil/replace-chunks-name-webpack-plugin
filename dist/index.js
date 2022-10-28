@@ -62,7 +62,7 @@ var WebpackReplaceChunksNamePlugin = (function () {
             compilation.hooks.afterHash.tap('replaceChunksName', function () {
                 if (_this.enable) {
                     compilation.chunks.forEach(function (item) {
-                        console.log(item.id, item.name);
+                        // console.log(item.id, item.name);
                         if (item.name || item.id)
                             _this.replaceConfig.forEach(function (_a) {
                                 var pattern = _a.pattern, replacement = _a.replacement;
